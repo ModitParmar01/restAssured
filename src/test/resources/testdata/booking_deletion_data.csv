@@ -1,0 +1,16 @@
+bookingId,expected_status,test_description
+1,200,delete_existing_booking_1
+2,200,delete_existing_booking_2
+3,200,delete_existing_booking_3
+4,200,delete_existing_booking_4
+5,200,delete_existing_booking_5
+6,200,delete_existing_booking_6
+7,200,delete_existing_booking_7
+8,200,delete_existing_booking_8
+9,200,delete_existing_booking_9
+10,200,delete_existing_booking_10
+999,200,delete_invalid_booking_id
+9999,200,delete_large_invalid_id
+-1,400,delete_negative_id
+-999,400,delete_large_negative_id
+0,400,delete_zero_id 

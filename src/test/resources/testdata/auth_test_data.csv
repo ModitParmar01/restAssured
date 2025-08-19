@@ -1,0 +1,13 @@
+username,password,expected_status,test_description
+admin,admin#123,200,valid_credentials
+admin,admin123,401,invalid_password
+admin123,admin#123,401,invalid_username
+admin,ADMIN#123,401,case_sensitive_password
+ADMIN,admin#123,401,case_sensitive_username
+,admin#123,400,missing_username
+admin,,400,missing_password
+,,400,missing_both_credentials
+admin@test.com,admin#123,401,email_as_username
+admin,admin@123,401,email_as_password
+admin,admin123!,401,special_char_password
+admin!,admin#123,401,special_char_username 
